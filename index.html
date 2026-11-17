@@ -3,30 +3,108 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snake-Rtro — Privacy Policy</title>
+<title>Snake-Rtro — Classic retro snake for Android</title>
+<meta name="description" content="Snake-Rtro is a retro-style Snake game for Android with a classic LCD look, three speeds, and no account needed. Free on Google Play.">
 <style>
-  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-  h1 { font-size: 1.6em; } h2 { font-size: 1.2em; margin-top: 1.6em; }
-  code { background: #f2f2f2; padding: 2px 5px; border-radius: 3px; }
+  :root, [data-theme="green"] { --bg:#c7d6b0; --ink:#26331e; --off:#94a47c; --card:#d7e3c3; }
+  [data-theme="white"] { --bg:#e9eff3; --ink:#1e2a33; --off:#7a8a96; --card:#f6f9fb; }
+  [data-theme="backlit"] { --bg:#2e4a3d; --ink:#dfffe0; --off:#7fafa5; --card:#385a4a; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family: -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; transition: background .25s, color .25s; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 20px 20px 32px; }
+  .top { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; padding-bottom:14px; border-bottom:2px solid var(--off); }
+  .nav a { color:var(--ink); text-decoration:none; font-weight:700; margin-right:16px; }
+  .nav a:hover { text-decoration:underline; }
+  .modes { display:flex; gap:8px; }
+  .mode { display:flex; align-items:center; gap:7px; background:transparent; color:var(--ink); border:2px solid var(--off); border-radius:999px; padding:5px 12px 5px 6px; font:inherit; font-size:.85em; cursor:pointer; }
+  .mode[aria-pressed="true"] { border-color:var(--ink); font-weight:700; }
+  .sw { width:22px; height:16px; border-radius:4px; border:1px solid rgba(0,0,0,.35); display:inline-block; position:relative; }
+  .sw::after { content:""; position:absolute; left:3px; top:5px; width:10px; height:5px; background:var(--c2); }
+  h1 { font-size: 2.4em; margin: 28px 0 0; letter-spacing: 1px; }
+  .tag { margin: 4px 0 24px; font-size: 1.1em; }
+  .btn { display:inline-block; background:var(--ink); color:var(--bg); padding:14px 26px; border-radius:10px; text-decoration:none; font-weight:700; }
+  .btn:hover { opacity:.9; }
+  .btn.alt { background:transparent; color:var(--ink); border:2px solid var(--ink); }
+  h2 { margin-top: 2em; font-size: 1.3em; }
+  h3 { font-size: 1.1em; margin-top: 1.5em; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap:12px; margin-top:12px; }
+  .card { background:var(--card); border:2px solid var(--off); border-radius:10px; padding:14px 16px; }
+  .card b { display:block; margin-bottom:4px; }
+  a { color: var(--ink); }
+  .cta { margin: 8px 0 4px; display:flex; flex-wrap:wrap; gap:10px; }
+  #privacy { margin-top: 3em; padding-top: 1.2em; border-top: 2px solid var(--off); scroll-margin-top: 12px; }
+  .shots { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:16px; margin-top:14px; }
+  .shot { text-align:center; font-size:.85em; }
+  .shot { margin:0; }
+  .shot img { width:100%; max-width:230px; height:auto; display:block; margin:0 auto 6px; border-radius:18px; border:2px solid var(--off); background:#111; }
+  .policy { background:var(--card); border:2px solid var(--off); border-radius:12px; padding:6px 22px 18px; margin-top:12px; }
+  .policy h3:first-of-type { margin-top: 1em; }
+  footer { margin-top: 2.5em; padding-top: 1em; border-top: 2px solid var(--off); font-size: .85em; }
 </style>
 </head>
 <body>
-<h1>Snake-Rtro — Privacy Policy</h1>
-<p><em>Last updated: v1.0</em></p>
+<div class="wrap">
+  <div class="top">
+    <nav class="nav"><a href="#game">Game</a><a href="#privacy">Privacy policy</a></nav>
+    <div class="modes" role="group" aria-label="Colour mode">
+      <button class="mode" data-t="green" aria-pressed="true"><span class="sw" style="background:#c7d6b0;--c2:#26331e"></span>Classic</button>
+      <button class="mode" data-t="white" aria-pressed="false"><span class="sw" style="background:#e9eff3;--c2:#1e2a33"></span>White</button>
+      <button class="mode" data-t="backlit" aria-pressed="false"><span class="sw" style="background:#2e4a3d;--c2:#dfffe0"></span>Backlit</button>
+    </div>
+  </div>
 
+  <main id="game">
+    <h1>SNAKE-RTRO</h1>
+    <p class="tag">Classic retro-style Snake for Android</p>
+
+    <div class="cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.snakertro.app">Get it on Google Play</a>
+      <a class="btn alt" href="#privacy">Privacy policy</a>
+    </div>
+
+    <h2>About the game</h2>
+    <p>Snake-Rtro brings back the feel of the classic mobile Snake: a monochrome LCD
+    look, a chunky pixel snake, and quick, satisfying runs. Eat, grow, and don't
+    hit the walls or yourself.</p>
+
+    <h2>Features</h2>
+    <div class="grid">
+      <div class="card"><b>Three speeds</b>Easy, Medium and Fast, each with its own board size.</div>
+      <div class="card"><b>Special food</b>Rare bonus food opens a passage through the side walls.</div>
+      <div class="card"><b>Retro look</b>LCD-style board with a snake that glides and flicks its tongue.</div>
+      <div class="card"><b>Your controls</b>Pick your D-pad layout, or swipe. Haptic feedback included.</div>
+      <div class="card"><b>Pick up and play</b>No account, no sign-up. Pause and resume any time.</div>
+      <div class="card"><b>Free to play</b>Ads support the game. Your gameplay data stays on your device.</div>
+    </div>
+
+    <h2>Game screens</h2>
+    <div class="shots">
+      <figure class="shot"><img src="images/menu.webp" alt="Snake-Rtro main menu with Easy, Medium, Fast and Settings" loading="lazy" width="945" height="2000"><figcaption>Main menu</figcaption></figure>
+      <figure class="shot"><img src="images/gameplay-classic.webp" alt="Gameplay in the classic green LCD theme with obstacles and food" loading="lazy" width="941" height="2000"><figcaption>Gameplay, classic green</figcaption></figure>
+      <figure class="shot"><img src="images/gameplay-nokia-white.webp" alt="Gameplay in the Nokia white theme" loading="lazy" width="937" height="2000"><figcaption>Gameplay, Nokia white</figcaption></figure>
+      <figure class="shot"><img src="images/settings-themes.webp" alt="Settings screen with the screen theme picker" loading="lazy" width="928" height="2000"><figcaption>Choose your screen theme</figcaption></figure>
+    </div>
+  </main>
+
+  <section id="privacy">
+    <h2>Privacy policy</h2>
+    <p><em>Last updated: November 2026 (app version 2.1)</em></p>
+    <div class="policy">
 <p>Snake-Rtro is a free, single-player game. This policy explains what data
 is (and isn't) collected when you install and play it.</p>
 
-<h2>Data we store ourselves</h2>
+<h3>Data we store ourselves</h3>
 <p>An anonymous, locally-generated device ID, your best scores per
-difficulty, your D-pad layout choice, and (if you pause) a snapshot of your
+difficulty, your D-pad layout and screen theme choices, and (if you pause) a snapshot of your
 in-progress run. All of this lives only in the app's private on-device
 storage. We never see it, and it is never uploaded to any server we
 operate — Snake-Rtro has no backend of its own.</p>
 
-<h2>Ads (Google AdMob)</h2>
+<h3>Ads (Google AdMob)</h3>
 <p>Snake-Rtro shows ads served by Google AdMob: a banner on the menu and
-pause screens, and an occasional full-screen interstitial. This is the only
+pause screens, an occasional full-screen interstitial, and an optional
+rewarded video you can choose to watch to continue a run. This is the only
 reason the app requests internet access, and Google's ad SDK is the only
 third-party code included.</p>
 <p>Google's ad SDK can collect an advertising identifier and other technical
@@ -39,29 +117,51 @@ for your consent via Google's User Messaging Platform before showing
 personalized ads; if you decline, you'll still see ads, but non-personalized
 ones.</p>
 
-<h2>What we don't collect</h2>
+<h3>What we don't collect</h3>
 <p>We never ask for your name, email, location, contacts, or photos, and we
 have no way to identify you as a person — only your device, via the
 anonymous local ID described above.</p>
 
-<h2>Children</h2>
+<h3>Children</h3>
 <p>Snake-Rtro is not directed at children under 13 as a matter of marketing.
 We do not knowingly collect personal information from children. If you
 believe a child has provided us personal information, contact us using the
 details below and we will address it.</p>
 
-<h2>Data retention and deletion</h2>
+<h3>Data retention and deletion</h3>
 <p>Uninstalling the app deletes everything described above. There is no
 cloud backup, so nothing can be "deleted on request" beyond that — it's
 already gone.</p>
 
-<h2>Changes to this policy</h2>
+<h3>Changes to this policy</h3>
 <p>If this policy changes, the updated version will be published at this
 same URL with a new "last updated" date above.</p>
 
-<h2>Contact</h2>
+<h3>Contact</h3>
 <p>Questions about this policy or the app's data handling: open an issue on
 the project repository, or reach out via the contact details on the Play
 Store listing.</p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="#game">Back to top</a> · <a href="https://play.google.com/store/apps/details?id=com.snakertro.app">Google Play</a>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement, btns = document.querySelectorAll('.mode');
+  function set(t) {
+    root.setAttribute('data-theme', t);
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.t === t ? 'true' : 'false'); });
+    try { localStorage.setItem('snakertro-theme', t); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('snakertro-theme'); } catch (e) {}
+  set(saved || 'green');
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.t); }); });
+})();
+</script>
 </body>
 </html>
